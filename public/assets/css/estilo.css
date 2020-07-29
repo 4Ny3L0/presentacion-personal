@@ -1,8 +1,10 @@
 :root {
     --color-blanco: white;
-    --color-boton: #81a37a;
+    /* --color-boton: #81a37a; */
+    --color-principal: #1d7b8b;
     --transparencia: rgba(28, 34, 28, 0.4);
-    --hover: #68b159;
+    --hover: #239fb4;
+    /* --hover: #68b159; */
 }
 
 .container {
@@ -32,7 +34,7 @@
 }
 
 .nav a:hover {
-    background-color: #81a37a;
+    background-color: var(--color-principal);
 }
 
 .nombre-titulo {
@@ -91,9 +93,9 @@ h2 {
 #barra {
     position: absolute;
     top: 0;
-    width: 50%;
+    width: 40%;
     height: 50px;
-    background-color: var(--color-boton);
+    background-color: var(--color-principal);
     margin: 0;
     padding: 0;
     padding-bottom: 10px;
@@ -107,7 +109,7 @@ h2 {
 }
 
 .container-form p {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 svg {
@@ -120,7 +122,7 @@ svg {
 .container-form form {
     background-color: var(--color-blanco);
     padding: 50px 0;
-    width: 50%;
+    width: 40%;
     margin: 50px auto 50px;
 }
 
@@ -135,7 +137,7 @@ svg {
     border-left: none;
     border-right: none;
     color: black;
-    font-size: 18px;
+    font-size: 16px;
     outline: none;
 }
 
@@ -161,7 +163,7 @@ svg {
 .container-form textarea::placeholder {
     color: black;
     padding: 0;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .container-form button {
@@ -170,9 +172,10 @@ svg {
     width: 50.9%;
     padding: 10px 0;
     color: white;
-    background-color: var(--color-boton);
+    background-color: var(--color-principal);
     border: none;
     text-transform: uppercase;
+    font-size: 14px;
 }
 
 .container-form button:hover {
@@ -187,14 +190,14 @@ svg {
 }
 
 #whatsapp {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin: 0px 20px 0px 10px;
 }
 
 #fb {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 }
 
 
@@ -221,7 +224,7 @@ svg {
 .boton-descarga {
     width: 120px;
     height: 50px;
-    background-color: var(--color-boton);
+    background-color: var(--color-principal);
     margin: 0 auto 40px;
 }
 
@@ -233,4 +236,49 @@ svg {
 .boton-descarga:hover {
     background-color: var(--hover);
     cursor: pointer;
+}
+
+
+/*Página de error*/
+
+.contenedor-error {
+    margin: 100px auto 0;
+    background-color: rgba(28, 34, 28, 0.4);
+    text-align: center;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.contenedor-error h1 {
+    font-size: 80px;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.contenedor-error p {
+    font-size: 50px;
+    margin: 80px auto 50px;
+    width: fit-content;
+}
+
+.contenedor-error h2 a {
+    text-decoration: none;
+    color: white;
+    width: fit-content;
+}
+
+
+/*Efecto Neon*/
+
+.contenedor-error h1:hover,
+.contenedor-error p:hover,
+.contenedor-error a:hover {
+    text-decoration: none;
+    color: #26bdd8;
+    text-shadow: 0 0 50px #1d7b8b;
+}
+
+.contenedor-error p:hover,
+h1:hover {
+    cursor: default;
 }

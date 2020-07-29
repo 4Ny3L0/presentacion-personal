@@ -8,7 +8,7 @@
     {{> navbar}}
 
        <div class="container-form">
-            <form action="">
+            <form method="POST" action="/contacto">
                 <div id="barra">
                     <h1>Contacto</h1>
                 </div>
@@ -41,11 +41,11 @@
 
                 </div>
                 <p>Dejame tu mensaje!!</p>
-                <input type="text" placeholder="Nombre" autocomplete="off">
-                <input type="email" placeholder="Correo" autocomplete="off">
-                <input type="text" placeholder="Telefono/Celular" autocomplete="off">
-                <textarea name="" placeholder="Mensaje" maxlength="300"></textarea>
-                <button type="button">Enviar</button>
+                <input type="text" placeholder="Nombre" autocomplete="off" name="nombre">
+                <input type="email" placeholder="Correo" autocomplete="off" name="correo">
+                <input type="text" placeholder="Telefono/Celular" autocomplete="off" name="celular">
+                <textarea name="mensaje" placeholder="Mensaje" maxlength="300"></textarea>
+                <button type="submit">Enviar</button>
                 <div class="container-social">
                     <a href="https://wa.me/50761417992">
                         <img src="assets/css/images/wa.svg" alt="" srcset="" id="whatsapp">
