@@ -21,11 +21,7 @@ hbs.registerPartials(__dirname + '/views/partials/');
 //Rutas
 app.use(require('./routes/index.js'))
 
-app.post('/contacto', (req, res) => {
-    let body = req.body;
-    console.log(body)
-    res.render('contacto')
-})
+
 app.use((req, res, next) => {
         res.status(404).render('error')
     })

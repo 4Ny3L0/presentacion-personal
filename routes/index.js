@@ -25,5 +25,9 @@ app.get("/curriculum", (req, res) => {
 app.get("/contacto", (req, res) => {
     res.render("contacto");
 });
-
+app.post('/contacto', (req, res) => {
+    let body = req.body;
+    console.log(body)
+    res.render('contacto')
+})
 module.exports = app;

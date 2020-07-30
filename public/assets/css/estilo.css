@@ -74,8 +74,35 @@ h2 {
     background-color: black;
 }
 
+
+/*CONOCIMIENTOS*/
+
 .conocimientos {
     color: white;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.conocimientos h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.conocimientos ul {
+    width: fit-content;
+    margin: 0 auto;
+    list-style: none;
+    border-left: 5px solid;
+    border-left-color: var(--color-principal);
+    padding: 30px;
+    background-color: rgba(37, 43, 37, 0.4);
+    ;
+}
+
+.conocimientos li {
+    font-size: 20px;
+    padding-top: 10px;
 }
 
 
