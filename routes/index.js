@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const { enviarMail } = require('../mail')
 
 //pagina de inicio
 app.get("/", (req, res) => {
@@ -27,7 +28,9 @@ app.get("/contacto", (req, res) => {
 });
 app.post('/contacto', (req, res) => {
     let body = req.body;
-    console.log(body)
+    // receptor.text = body;
+    // console.log(body, receptor)
+    enviarMail(body)
     res.render('contacto')
 })
 module.exports = app;

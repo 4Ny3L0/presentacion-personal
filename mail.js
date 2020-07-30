@@ -9,18 +9,29 @@ const emisor = nodemailer.createTransport({
     }
 });
 
-const receptor = {
+let receptor = {
     from: euser,
     to: 'a10.gutierrez507@gmail.com',
     subject: 'Formulario de contactenos pagina web 410Tech',
-    text: 'funcionara?'
+    text: ''
 };
 
 
+const enviarMail = (contenido) => {
 
-emisor.sendMail(receptor, (err, info) => {
-    if (err) {
-        return console.log('error al intentar enviar el mail', err)
-    }
-    console.log(info.response)
-})
+    receptor.text =
+        `Nombre: ${contenido.nombre}
+     Correo: ${contenido.correo}
+     Celular/Telefono: ${contenido.celular}
+     Mensaje: ${contenido.mensaje}`;
+
+    emisor.sendMail(receptor, (err, info) => {
+        if (err) {
+            return console.log('error al intentar enviar el mail', err)
+        }
+        console.log(info.response)
+    })
+}
+
+
+module.exports = { enviarMail };
