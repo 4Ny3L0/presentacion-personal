@@ -263,6 +263,7 @@ svg {
     height: 50px;
     background-color: var(--color-principal);
     margin: 0 auto 40px;
+    padding-top: 10px;
 }
 
 .boton-descarga a {
@@ -319,3 +320,6 @@ svg {
 h1:hover {
     cursor: default;
 }
+
+
+/*MOBILES*/
