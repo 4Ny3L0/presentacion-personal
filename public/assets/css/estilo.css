@@ -7,6 +7,12 @@
     /* --hover: #68b159; */
 }
 
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*1rem=10px*/
+}
+
 .container {
     margin: 0 auto;
     display: block;
@@ -31,6 +37,7 @@
     color: white;
     text-decoration: none;
     padding: 15px 65px;
+    font-size: 1.7rem;
 }
 
 .nav a:hover {
@@ -51,7 +58,7 @@ h2 {
 
 .nombre-titulo h1 {
     padding-top: 150px;
-    font-size: 65px;
+    font-size: 6.5rem;
     margin-bottom: 10px;
     padding-left: 40px;
 }
@@ -63,7 +70,7 @@ h2 {
     text-align: right;
     margin-top: 0;
     padding-right: 65px;
-    font-size: 25px;
+    font-size: 2.5rem;
 }
 
 .particles-js-canvas-el {
@@ -86,7 +93,8 @@ h2 {
 .conocimientos h1 {
     text-align: center;
     text-transform: uppercase;
-    margin-top: 20px;
+    margin-top: 4.5rem;
+    margin-bottom: 4.5rem;
 }
 
 .conocimientos ul {
@@ -101,7 +109,7 @@ h2 {
 }
 
 .conocimientos li {
-    font-size: 20px;
+    font-size: 2rem;
     padding-top: 10px;
 }
 
@@ -136,7 +144,7 @@ h2 {
 }
 
 .container-form p {
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 
 svg {
@@ -164,7 +172,7 @@ svg {
     border-left: none;
     border-right: none;
     color: black;
-    font-size: 16px;
+    font-size: 1.6rem;
     outline: none;
 }
 
@@ -190,7 +198,7 @@ svg {
 .container-form textarea::placeholder {
     color: black;
     padding: 0;
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 .container-form button {
@@ -202,7 +210,7 @@ svg {
     background-color: var(--color-principal);
     border: none;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 
 .container-form button:hover {
@@ -231,7 +239,7 @@ svg {
 /*CURRICULUM*/
 
 .contenedor-principal-curriculum {
-    font-size: 20px;
+    font-size: 1.8rem;
     color: var(--color-blanco);
     text-align: center;
 }
@@ -239,6 +247,8 @@ svg {
 .contenedor-principal-curriculum h1 {
     margin-bottom: 0;
     text-transform: uppercase;
+    margin-top: 3.5rem;
+    margin-bottom: 3rem;
 }
 
 .contenedor-imagen {
@@ -277,7 +287,7 @@ svg {
 }
 
 .contenedor-error h1 {
-    font-size: 80px;
+    font-size: 7.5rem;
     margin: 0 auto;
     width: fit-content;
 }
