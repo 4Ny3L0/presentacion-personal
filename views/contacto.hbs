@@ -7,7 +7,7 @@
     <div class="container" id="particles-js">
     {{> navbar}}
 
-       <div class="container-form">
+       <div class="container-form deactivated">
             <form method="POST" action="/contacto">
                 <div id="barra">
                     <h1>Contacto</h1>
@@ -41,11 +41,16 @@
 
                 </div>
                 <p>Dejame tu mensaje!!</p>
-                <input type="text" placeholder="Nombre" autocomplete="off" name="nombre">
-                <input type="text" placeholder="Correo" autocomplete="off" name="correo">
-                <input type="text" placeholder="Telefono/Celular" autocomplete="off" name="celular">
-                <textarea name="mensaje" placeholder="Mensaje" maxlength="300"></textarea>
-                <button type="submit">Enviar</button>
+                <input type="text" placeholder="Nombre" autocomplete="off" name="nombre" maxlength="40">
+                <span ></span>
+                <input type="text" placeholder="Correo" autocomplete="off" name="correo" >
+                <span ></span>
+                <input type="text" placeholder="Telefono/Celular" autocomplete="off" name="celular" maxlength="15">
+                <span ></span>
+                <textarea name="mensaje" placeholder="Mensaje" maxlength="300"  required></textarea>
+                <span ></span>
+                <span class="mensaje">Todos los campos son requeridos</span>
+                <button type="submit" id="button" disabled>Enviar</button>
                 <div class="container-social">
                     <a href="https://wa.me/50761417992">
                         <img src="assets/css/images/wa.svg" alt="" srcset="" id="whatsapp">
@@ -65,6 +70,7 @@
     </div>
 
     {{>script}}
+    <script src="js/validations.js"></script>
 
 </body>
 
