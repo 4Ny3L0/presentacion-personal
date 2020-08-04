@@ -1,364 +1,500 @@
 :root {
-  --color-blanco: white;
-  /* --color-boton: #81a37a; */
-  --color-principal: #1d7b8b;
-  --transparencia: rgba(28, 34, 28, 0.4);
-  --hover: #239fb4;
-  /* --hover: #68b159; */
+    --color-blanco: white;
+    /* --color-boton: #81a37a; */
+    --color-principal: #1d7b8b;
+    --transparencia: rgba(28, 34, 28, 0.4);
+    --hover: #239fb4;
+    /* --hover: #68b159; */
 }
 
 html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-  /*1rem=10px*/
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*1rem=10px*/
 }
 
 .container {
-  margin: 0 auto;
-  display: block;
-  position: relative;
-  background-color: black;
-  z-index: 99;
-  height: 100vh;
-  overflow: auto;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    background-color: black;
+    z-index: 98;
+    height: 100vh;
+    overflow: auto;
 }
 
 .nav {
-  background-color: rgba(28, 34, 28, 0.4);
-  display: block;
-  width: 100%;
-  margin-top: 30px;
-  text-transform: uppercase;
-  padding: 15px 0px 15px 0px;
-  z-index: 96;
+    background-color: rgba(28, 34, 28, 0.4);
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    text-transform: uppercase;
+    padding: 15px 0px 15px 0px;
+    z-index: 96;
 }
 
 .nav a {
-  color: white;
-  text-decoration: none;
-  padding: 15px 65px;
-  font-size: 1.7rem;
+    color: white;
+    text-decoration: none;
+    padding: 15px 65px;
+    font-size: 1.7rem;
 }
 
 .nav a:hover {
-  background-color: var(--color-principal);
+    background-color: var(--color-principal);
 }
 
+.nav i {
+    display: none;
+}
+
+.hamburger-menu i {
+    display: none;
+    font-size: 15rem;
+    color: white;
+}
+
+#x {
+    display: none;
+}
+
+
+/* TITULO */
+
 .nombre-titulo {
-  color: white;
-  z-index: 97;
-  position: relative;
+    color: white;
+    z-index: 97;
+    position: relative;
 }
 
 .nombre-titulo h1,
 h2 {
-  text-transform: uppercase;
-  z-index: 98;
+    text-transform: uppercase;
+    z-index: 98;
 }
 
 .nombre-titulo h1 {
-  padding-top: 150px;
-  font-size: 6.5rem;
-  margin-bottom: 10px;
-  padding-left: 40px;
+    padding-top: 150px;
+    font-size: 6.5rem;
+    margin-bottom: 10px;
+    padding-left: 40px;
 }
 
 .nombre-titulo h2 {
-  position: absolute;
-  width: 85%;
-  background-color: rgba(28, 34, 28, 0.4);
-  text-align: right;
-  margin-top: 0;
-  padding-right: 65px;
-  font-size: 2.5rem;
+    position: absolute;
+    width: 85%;
+    background-color: rgba(28, 34, 28, 0.4);
+    text-align: right;
+    margin-top: 0;
+    padding-right: 65px;
+    font-size: 2.5rem;
 }
 
+
+/* PARTICULAS */
+
 .particles-js-canvas-el {
-  position: fixed;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  background-color: black;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    background-color: black;
 }
+
 
 /*CONOCIMIENTOS*/
 
 .conocimientos {
-  color: white;
-  margin: 0 auto;
-  width: 100%;
+    color: white;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .conocimientos h1 {
-  text-align: center;
-  text-transform: uppercase;
-  margin-top: 4.5rem;
-  margin-bottom: 4.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 4.5rem;
+    margin-bottom: 4.5rem;
 }
 
 .conocimientos ul {
-  width: fit-content;
-  margin: 0 auto;
-  list-style: none;
-  border-left: 5px solid;
-  border-left-color: var(--color-principal);
-  padding: 30px;
-  background-color: rgba(37, 43, 37, 0.4);
+    width: fit-content;
+    margin: 0 auto;
+    list-style: none;
+    border-left: 5px solid;
+    border-left-color: var(--color-principal);
+    padding: 30px;
+    background-color: rgba(37, 43, 37, 0.4);
 }
 
 .conocimientos li {
-  font-size: 2rem;
-  padding-top: 10px;
+    font-size: 2rem;
+    padding-top: 10px;
 }
+
 
 /* Formulario-Contactenos */
 
 .container-form {
-  color: black;
-  margin: 0 auto;
-  width: 100%;
-  display: block;
-  position: relative;
-  text-align: center;
+    color: black;
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+    position: relative;
+    text-align: center;
 }
 
 #barra {
-  position: absolute;
-  top: 0;
-  width: 40%;
-  height: 50px;
-  background-color: var(--color-principal);
-  margin: 0;
-  padding: 0;
-  padding-bottom: 10px;
+    position: absolute;
+    top: 0;
+    width: 40%;
+    height: 50px;
+    background-color: var(--color-principal);
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px;
 }
 
 .container-form h1 {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  color: var(--color-blanco);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: var(--color-blanco);
 }
 
 .container-form p {
-  font-size: 1.8rem;
+    font-size: 1.8rem;
 }
 
 svg {
-  width: 70px;
-  height: 70px;
-  margin: 15px auto 0;
-  justify-content: center;
+    width: 70px;
+    height: 70px;
+    margin: 15px auto 0;
+    justify-content: center;
 }
 
 .container-form form {
-  background-color: var(--color-blanco);
-  padding: 50px 0;
-  width: 40%;
-  margin: 50px auto 50px;
+    background-color: var(--color-blanco);
+    padding: 50px 0;
+    width: 40%;
+    margin: 50px auto 50px;
 }
 
 .container-form form input {
-  margin: 0 auto;
-  display: block;
-  width: 50%;
-  padding-bottom: 10px;
-  margin-bottom: 15px;
-  background-color: var(--color-blanco);
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  color: black;
-  font-size: 1.6rem;
-  outline: none;
+    margin: 0 auto;
+    display: block;
+    width: 50%;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    background-color: var(--color-blanco);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: black;
+    font-size: 1.6rem;
+    outline: none;
 }
 
 .container-form form input::placeholder {
-  color: black;
+    color: black;
 }
 
 .container-form textarea {
-  margin: 0 auto 1.2rem;
-  display: block;
-  width: 50.1%;
-  height: 100px;
-  background-color: var(--fondo);
-  color: black;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: solid 2px gray;
-  resize: none;
-  outline: none;
-  font-size: 1.6rem;
+    margin: 0 auto 1.2rem;
+    display: block;
+    width: 50.1%;
+    height: 100px;
+    background-color: var(--fondo);
+    color: black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 2px gray;
+    resize: none;
+    outline: none;
+    font-size: 1.6rem;
 }
 
 .container-form textarea::placeholder {
-  color: black;
-  padding: 0;
-  font-size: 1.6rem;
+    color: black;
+    padding: 0;
+    font-size: 1.6rem;
 }
 
 .activated button {
-  margin: 30px auto 40px;
-  display: block;
-  width: 50.9%;
-  padding: 10px 0;
-  color: white;
-  background-color: var(--color-principal);
-  border: none;
-  text-transform: uppercase;
-  font-size: 1.4rem;
+    margin: 30px auto 40px;
+    display: block;
+    width: 50.9%;
+    padding: 10px 0;
+    color: white;
+    background-color: var(--color-principal);
+    border: none;
+    text-transform: uppercase;
+    font-size: 1.4rem;
 }
 
 .activated button:hover {
-  cursor: pointer;
-  background-color: var(--hover);
+    cursor: pointer;
+    background-color: var(--hover);
 }
 
 .deactivated button {
-  margin: 30px auto 40px;
-  display: block;
-  width: 50.9%;
-  padding: 10px 0;
-  color: white;
-  background-color: var(--color-principal);
-  border: none;
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  cursor: not-allowed;
+    margin: 30px auto 40px;
+    display: block;
+    width: 50.9%;
+    padding: 10px 0;
+    color: white;
+    background-color: var(--color-principal);
+    border: none;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    cursor: not-allowed;
 }
 
 .deactivated button:hover {
-  cursor: not-allowed;
-  
+    cursor: not-allowed;
 }
 
 .container-social {
-  margin: 0 auto;
-  text-align: center;
-  display: block;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
 }
 
 #whatsapp {
-  width: 40px;
-  height: 40px;
-  margin: 0px 20px 0px 10px;
+    width: 40px;
+    height: 40px;
+    margin: 0px 20px 0px 10px;
 }
 
 #fb {
-  width: 40px;
-  height: 40px;
+    width: 40px;
+    height: 40px;
 }
+
 
 /*CURRICULUM*/
 
 .contenedor-principal-curriculum {
-  font-size: 1.8rem;
-  color: var(--color-blanco);
-  text-align: center;
+    font-size: 1.8rem;
+    color: var(--color-blanco);
+    text-align: center;
 }
 
 .contenedor-principal-curriculum h1 {
-  margin-bottom: 0;
-  text-transform: uppercase;
-  margin-top: 3.5rem;
-  margin-bottom: 3rem;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    margin-top: 3.5rem;
+    margin-bottom: 3rem;
 }
 
 .contenedor-imagen {
-  width: 550px;
-  height: 500px;
-  background: url("images/curriculum.png");
-  margin: 0 auto 40px;
+    width: 550px;
+    height: 500px;
+    background: url("images/curriculum.png");
+    margin: 0 auto 40px;
 }
 
 .boton-descarga {
-  width: 120px;
-  height: 50px;
-  background-color: var(--color-principal);
-  margin: 0 auto 40px;
-  padding-top: 10px;
+    width: 120px;
+    height: 50px;
+    background-color: var(--color-principal);
+    margin: 0 auto 40px;
+    padding-top: 10px;
 }
 
 .boton-descarga a {
-  text-decoration: none;
-  color: var(--color-blanco);
+    text-decoration: none;
+    color: var(--color-blanco);
 }
 
 .boton-descarga:hover {
-  background-color: var(--hover);
-  cursor: pointer;
+    background-color: var(--hover);
+    cursor: pointer;
 }
+
 
 /*Página de error*/
 
 .contenedor-error {
-  margin: 100px auto 0;
-  background-color: rgba(28, 34, 28, 0.4);
-  text-align: center;
-  color: white;
-  padding-bottom: 20px;
+    margin: 100px auto 0;
+    background-color: rgba(28, 34, 28, 0.4);
+    text-align: center;
+    color: white;
+    padding-bottom: 20px;
 }
 
 .contenedor-error h1 {
-  font-size: 7.5rem;
-  margin: 0 auto;
-  width: fit-content;
+    font-size: 7.5rem;
+    margin: 0 auto;
+    width: fit-content;
 }
 
 .contenedor-error p {
-  font-size: 50px;
-  margin: 80px auto 50px;
-  width: fit-content;
+    font-size: 50px;
+    margin: 80px auto 50px;
+    width: fit-content;
 }
 
 .contenedor-error h2 a {
-  text-decoration: none;
-  color: white;
-  width: fit-content;
+    text-decoration: none;
+    color: white;
+    width: fit-content;
 }
+
 
 /*Efecto Neon*/
 
 .contenedor-error h1:hover,
 .contenedor-error p:hover,
 .contenedor-error a:hover {
-  text-decoration: none;
-  color: #26bdd8;
-  text-shadow: 0 0 50px #1d7b8b;
+    text-decoration: none;
+    color: #26bdd8;
+    text-shadow: 0 0 50px #1d7b8b;
 }
 
 .contenedor-error p:hover,
 h1:hover {
-  cursor: default;
+    cursor: default;
 }
+
+
+/*MENSAJES DE Error*/
+
+.container-form .inputs {
+    outline: 4px solid;
+    outline-color: rgb(226, 63, 63);
+    border-bottom: none;
+}
+
+.error {
+    position: relative;
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.error {
+    position: relative;
+    display: block;
+    font-size: 1.2rem;
+    /* background-color: */
+    width: fit-content;
+    margin: 0 auto 1.5rem;
+    color: rgb(226, 63, 63);
+}
+
+.mensaje {
+    font-size: 1.6rem;
+    position: relative;
+    display: block;
+}
+
 
 /*MOBILES*/
 
-/*MENSAJES DE Error*/
-.container-form .inputs {
-  outline: 4px solid;
-  outline-color: rgb(226, 63, 63);
-  border-bottom: none;
+@media screen and (max-width:450px) {
+    body {
+        padding: 0;
+        margin: 0 auto;
+        box-sizing: border-box;
+        overflow: auto;
+    }
+    .container {
+        margin: 0 auto;
+        padding: 0;
+    }
+    /* NAVBAR */
+    .hamburger-menu {
+        width: fit-content;
+    }
+    .hamburger-menu i {
+        position: relative;
+        display: block;
+        width: fit-content;
+        font-size: 3.5rem;
+        color: white;
+        margin-top: 3rem;
+        margin-left: 2rem;
+    }
+    .nav {
+        display: none;
+        position: absolute;
+        z-index: 99;
+        top: 0;
+        bottom: 0;
+        background-color: rgb(37, 41, 43, 1);
+    }
+    .nav a {
+        display: block;
+        font-size: 3rem;
+    }
+    #x {
+        display: block;
+        padding: 0;
+        width: fit-content;
+        margin-left: 2.5rem;
+    }
+    .nav a:first-child:hover {
+        background-color: rgb(37, 41, 43, 0.9);
+    }
+    .nav a i {
+        display: block;
+        font-size: 3.5rem;
+        color: var(--color-blanco);
+        margin-left: 0rem;
+        margin-bottom: 1rem;
+    }
+    /* TITULO */
+    .nombre-titulo h1 {
+        width: 100%;
+        margin: 3.5rem auto 0;
+        padding-left: 0;
+        padding-top: 5rem;
+        font-size: 3.5rem;
+        margin-bottom: 5rem;
+    }
+    .nombre-titulo h2 {
+        width: 90%;
+        font-size: 1.8rem;
+        margin: 0 auto;
+        padding: 2rem 0 2rem;
+        text-align: left;
+        line-height: 2.5rem;
+    }
+    /*CURRICULUM*/
+    .contenedor-imagen {
+        width: 80%;
+        height: 300px;
+        background: url("images/curriculum.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: 0 auto 40px;
+    }
+    /* FORMULARIO */
+    .container-form {
+        width: 100%;
+    }
+    .container-form form {
+        width: 90%;
+        height: auto;
+    }
+    #barra {
+        width: 90%;
+        height: auto;
+    }
 }
- .error {
-  position: relative;
-  display: block;
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-}
- .error {
-  position: relative;
-  display: block;
-  font-size: 1.2rem;
-  /* background-color: */
-  width: fit-content;
-  margin: 0 auto 1.5rem;
-  color:  rgb(226, 63, 63);
-}
-.mensaje{
-  font-size: 1.6rem;
-  position: relative;
-  display: block;
+
+@media screen and (max-width:768px) and (min-height:750px) {
+    .container-form {
+        width: 100%;
+    }
+    .container-form form {
+        width: 80%;
+        height: auto;
+    }
+    #barra {
+        width: 80%;
+        height: auto;
+    }
 }
