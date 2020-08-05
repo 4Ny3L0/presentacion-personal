@@ -86,9 +86,22 @@ h2 {
     background-color: rgba(28, 34, 28, 0.4);
     text-align: right;
     margin-top: 0;
+    margin-bottom: 5rem;
     padding-right: 65px;
     font-size: 2.5rem;
 }
+
+
+/* .perfil {
+    background-image: url('./images/perfil.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30%;
+    height: 400px;
+    display: block;
+    margin: 5rem auto 1rem;
+} */
 
 
 /* PARTICULAS */
@@ -398,24 +411,31 @@ h1:hover {
         padding: 0;
         margin: 0 auto;
         box-sizing: border-box;
-        overflow: auto;
     }
     .container {
         margin: 0 auto;
-        padding: 0;
+        display: block;
+        position: relative;
+        background-color: black;
+        z-index: 98;
+        height: 100%;
+        /* overflow: auto; */
     }
     /* NAVBAR */
     .hamburger-menu {
         width: fit-content;
+        padding: 0;
+        margin: 0;
     }
     .hamburger-menu i {
         position: relative;
-        display: block;
-        width: fit-content;
-        font-size: 3.5rem;
+        display: inline-block;
+        margin-right: 0;
+        font-size: 3rem;
         color: white;
         margin-top: 3rem;
         margin-left: 2rem;
+        z-index: 98;
     }
     .nav {
         display: none;
@@ -427,7 +447,7 @@ h1:hover {
     }
     .nav a {
         display: block;
-        font-size: 3rem;
+        font-size: 1.8rem;
     }
     #x {
         display: block;
@@ -445,22 +465,64 @@ h1:hover {
         margin-left: 0rem;
         margin-bottom: 1rem;
     }
+    .nav a:hover {
+        background-color: var(--hover);
+    }
     /* TITULO */
     .nombre-titulo h1 {
         width: 100%;
-        margin: 3.5rem auto 0;
+        margin-top: 3.5rem;
         padding-left: 0;
         padding-top: 5rem;
         font-size: 3.5rem;
         margin-bottom: 5rem;
+        text-align: center;
     }
     .nombre-titulo h2 {
-        width: 90%;
+        width: 100%;
         font-size: 1.8rem;
         margin: 0 auto;
         padding: 2rem 0 2rem;
-        text-align: left;
+        text-align: center;
         line-height: 2.5rem;
+    }
+    .perfil {
+        background-image: url('./images/perfil.jpg');
+        display: block;
+        position: relative;
+        margin: 12rem auto 0;
+        width: 60%;
+        height: 25rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 1px;
+        border-radius: 500px;
+    }
+    /*CONOCIMIENTOS*/
+    .conocimientos {
+        color: white;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .conocimientos h1 {
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 4.5rem;
+        margin-bottom: 4.5rem;
+        font-size: 2rem;
+    }
+    .conocimientos ul {
+        width: 75%;
+        list-style: none;
+        border-left: 5px solid;
+        border-left-color: var(--color-principal);
+        padding: 30px;
+        background-color: rgba(37, 43, 37, 0.4);
+    }
+    .conocimientos li {
+        font-size: 2rem;
+        padding-top: 10px;
     }
     /*CURRICULUM*/
     .contenedor-imagen {
@@ -470,6 +532,13 @@ h1:hover {
         background-size: contain;
         background-repeat: no-repeat;
         margin: 0 auto 40px;
+    }
+    .contenedor-principal-curriculum h1 {
+        margin-bottom: 0;
+        font-size: 2rem;
+        text-transform: uppercase;
+        margin-top: 3.5rem;
+        margin-bottom: 3rem;
     }
     /* FORMULARIO */
     .container-form {
