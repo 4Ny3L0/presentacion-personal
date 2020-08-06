@@ -420,7 +420,7 @@ h1:hover {
         z-index: 98;
         width: 100%;
         height: 100%;
-        overflow: auto;
+        overflow: visible;
         box-sizing: border-box;
         top: 0;
         bottom: 0;
@@ -445,11 +445,11 @@ h1:hover {
         display: none;
         position: absolute;
         z-index: 99;
-        top: 0;
-        bottom: 0;
+        /* top: 0;
+        bottom: 0; */
         background-color: rgb(37, 41, 43, 1);
         box-sizing: border-box;
-        height: 100%;
+        height: 100vh;
     }
     .nav a {
         display: block;
@@ -547,16 +547,18 @@ h1:hover {
         margin-bottom: 3rem;
     }
     /* FORMULARIO */
-    .container-form {
-        width: 100%;
-    }
+    .container-form {}
     .container-form form {
         width: 90%;
-        height: auto;
+        padding: 0;
+        overflow: hidden;
+    }
+    svg {
+        display: none;
     }
     #barra {
         width: 90%;
-        height: auto;
+        padding: 0;
     }
 }
 
