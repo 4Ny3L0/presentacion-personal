@@ -29,22 +29,9 @@ const caracteresInvalidosNombre = [
   "_",
   "-",
 ];
-const caracteresEmail = ["@", "."];
-const valoresCelular = [
-  "0",
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
-  "+",
-  "(",
-  ")",
-];
+const caracteresEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$/;
+const valoresCelular = /^[\+]?[0-9]+?[\s-]?[0-9]+[\s-]?[0-9]+$/;
+
 const contarCaracteres = () => {
   //=============VALIDACION DEL CAMPO NOMBRE===================
   campos[0].addEventListener("keyup", () => {
@@ -71,29 +58,36 @@ const contarCaracteres = () => {
   campos[1].addEventListener("keyup", () => {
     let campo2 = campos[1].value;
     campo2 = campo2.trim();
-    let flag = "";
-    for (valor of caracteresEmail) {
-      let posicionE;
-      posicionE = campo2.indexOf(valor);
-      if (posicionE == -1) {
-        flag = flag + valor;
-        span3.innerHTML = `El correo no es valido`;
-        mensaje.appendChild(span3);
-        span3.style.display = "block";
-      }
-    }
-    if (flag.length == 0) {
+    let validacion = campo2.match(caracteresEmail);
+    if (validacion !== null) {
+      console.log("correcto");
       span3.style.display = "none";
+    } else {
+      console.log("mal");
+      span3.innerHTML = `El correo no es valido`;
+      mensaje.appendChild(span3);
+      span3.style.display = "block";
     }
   });
   //================================
 
   //=============VALIDACION DEL CAMPO TELEFONO/CELULAR===================
   campos[2].addEventListener("keyup", () => {
-    let campo3 = Number(campos[2].value);
-    console.log(campo3,campo3.length);
+    let campo3 = campos[2].value;
+    campo3=campo3.trim();
+    console.log(campo3, campo3.length);
 
-    let contador = "";
+    let v_Telefono_celular=campo3.match(valoresCelular);
+    if(v_Telefono_celular===null){
+      console.log(v_Telefono_celular)
+      span4.innerHTML ="Por favor ingresa un número de telefono/celular valido";
+        mensaje.appendChild(span4);
+        span4.style.display = "block";
+      }
+      else{
+        span4.style.display = "none";
+      }
+    }); 
     // for (numero of valoresCelular) {
     //   let posicionC = campo3.indexOf(numero);
     //   console.log(numero,campos[2].value,posicionC);
@@ -108,7 +102,6 @@ const contarCaracteres = () => {
     // if (contador.length) {
     //   // console.log(contador.length);
     // }
-  });
   //================================
 
   //     let campo3 = campos[2].value;
