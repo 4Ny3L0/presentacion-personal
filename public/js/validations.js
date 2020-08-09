@@ -3,13 +3,15 @@ const campos = document.querySelectorAll(
 );
 const boton = document.querySelector("#button");
 const mensaje = document.querySelector(".mensaje");
-let span2 = document.createElement("span");
-let span3 = document.createElement("span");
-let span4 = document.createElement("span");
+let span1 = document.getElementById('m1');
+let span2 = document.getElementById('m2');
+let span3 = document.getElementById('m3');
+let span4 = document.getElementById('m4');
+let icon = `<i class="fas fa-asterisk"></i>`;
 
-span2.classList.add("mensaje");
-span3.classList.add("mensaje");
-span4.classList.add("mensaje");
+// span2.classList.add("mensaje");
+// span3.classList.add("mensaje");
+// span4.classList.add("mensaje");
 const caracteresInvalidosNombre = [
   "1",
   "2",
@@ -32,7 +34,9 @@ const caracteresInvalidosNombre = [
 const caracteresEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$/;
 const valoresCelular = /^[\+]?[0-9]+?[\s-]?[0-9]+[\s-]?[0-9]+$/;
 
+// COMIENZA LA FUNCION
 const contarCaracteres = () => {
+
   //=============VALIDACION DEL CAMPO NOMBRE===================
   campos[0].addEventListener("keyup", () => {
     let campo1 = campos[0].value;
@@ -42,17 +46,16 @@ const contarCaracteres = () => {
       let posicion = campo1.indexOf(valor);
       if (posicion != -1) {
         valorF = valorF + valor;
-        span2.innerHTML = `El campo nombre no puede tener este valor ${valorF}`;
-        mensaje.appendChild(span2);
-        span2.style.display = "block";
-        // = `El campo nombre no puede tener este valor ${valorF}`;
+        span1.innerHTML = `${icon}El campo nombre no puede tener este valor ${valorF}`;
+        // mensaje.appendChild(span2);
+        span1.style.display = "block";
       }
     }
     if (valorF.length == 0) {
-      span2.style.display = "none";
+      span1.style.display = "none";
     }
   });
-  //=====================================
+//==============================================================================
 
   //=============VALIDACION DEL CAMPO CORREO===================
   campos[1].addEventListener("keyup", () => {
@@ -60,49 +63,42 @@ const contarCaracteres = () => {
     campo2 = campo2.trim();
     let validacion = campo2.match(caracteresEmail);
     if (validacion !== null) {
-      console.log("correcto");
-      span3.style.display = "none";
+      // console.log("correcto");
+      span2.style.display = "none";
     } else {
-      console.log("mal");
-      span3.innerHTML = `El correo no es valido`;
+      // console.log("mal",campo2);
+      span2.innerHTML = `${icon}El correo no es valido`;
       mensaje.appendChild(span3);
-      span3.style.display = "block";
+      span2.style.display = "block";
     }
   });
-  //================================
+//==============================================================================
 
   //=============VALIDACION DEL CAMPO TELEFONO/CELULAR===================
   campos[2].addEventListener("keyup", () => {
     let campo3 = campos[2].value;
     campo3=campo3.trim();
-    console.log(campo3, campo3.length);
+    // console.log(campo3, campo3.length);
 
     let v_Telefono_celular=campo3.match(valoresCelular);
     if(v_Telefono_celular===null){
       console.log(v_Telefono_celular)
-      span4.innerHTML ="Por favor ingresa un número de telefono/celular valido";
-        mensaje.appendChild(span4);
-        span4.style.display = "block";
+      span3.innerHTML =`${icon}Por favor ingresa un número de telefono/celular valido`;
+        span3.style.display = "block";
       }
       else{
-        span4.style.display = "none";
+        span3.style.display = "none";
       }
-    }); 
-    // for (numero of valoresCelular) {
-    //   let posicionC = campo3.indexOf(numero);
-    //   console.log(numero,campos[2].value,posicionC);
-    //   if (posicionC == -1 && campo3.length>=6) {
-    //     contador = contador + numero;
-    //     span4.innerHTML =
-    //       "Por favor ingresa un número de telefono/celular valido";
-    //     mensaje.appendChild(span4);
-    //     span4.style.display = "block";
-    //   }
-    // }
-    // if (contador.length) {
-    //   // console.log(contador.length);
-    // }
-  //================================
+    });
+//==============================================================================
+
+//=============CAMPO Mensaje===================
+
+campos[3].addEventListener('keyup',()=>{
+  let campoM= campos[3].value.length;
+  span4.innerHTML = `${campoM}/300 Carácteres`;
+})
+
 
   //     let campo3 = campos[2].value;
   //     let campo4 = campos[3].value;
