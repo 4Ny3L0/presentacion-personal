@@ -9,7 +9,8 @@ let span3 = document.getElementById("m3");
 let span4 = document.getElementById("m4");
 let icon = `<i class="fas fa-asterisk"></i>`;
 let arregloFlags = [false, false, false, false];
-console.log(arregloFlags);
+// console.log(arregloFlags);
+let v;
 // span2.classList.add("mensaje");
 // span3.classList.add("mensaje");
 // span4.classList.add("mensaje");
@@ -75,7 +76,6 @@ const contarCaracteres = () => {
     } else {
       // console.log("mal",campo2);
       span2.innerHTML = `${icon}El correo no es valido`;
-      // mensaje.appendChild(span3);
       span2.style.display = "block";
       arregloFlags[1] = false;
     }
@@ -113,6 +113,14 @@ const contarCaracteres = () => {
     }
   });
 
+
+  if(arregloFlags[0]==true && arregloFlags[1]==true && arregloFlags[2]==true && arregloFlags[3]==true){
+    v= 'todo es true'
+    console.log('todos los campos llenos',v)
+  }else{
+    v= 'alguun campo Falta'
+    console.log('Falta algun campo por llenar',v)
+  }
   //     let campo3 = campos[2].value;
   //     let campo4 = campos[3].value;
   //     //  console.log('campo1: ',campo1)
