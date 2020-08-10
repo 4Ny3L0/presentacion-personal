@@ -3,12 +3,13 @@ const campos = document.querySelectorAll(
 );
 const boton = document.querySelector("#button");
 const mensaje = document.querySelector(".mensaje");
-let span1 = document.getElementById('m1');
-let span2 = document.getElementById('m2');
-let span3 = document.getElementById('m3');
-let span4 = document.getElementById('m4');
+let span1 = document.getElementById("m1");
+let span2 = document.getElementById("m2");
+let span3 = document.getElementById("m3");
+let span4 = document.getElementById("m4");
 let icon = `<i class="fas fa-asterisk"></i>`;
-
+let arregloFlags = [false, false, false, false];
+console.log(arregloFlags);
 // span2.classList.add("mensaje");
 // span3.classList.add("mensaje");
 // span4.classList.add("mensaje");
@@ -36,7 +37,6 @@ const valoresCelular = /^[\+]?[0-9]+?[\s-]?[0-9]+[\s-]?[0-9]+$/;
 
 // COMIENZA LA FUNCION
 const contarCaracteres = () => {
-
   //=============VALIDACION DEL CAMPO NOMBRE===================
   campos[0].addEventListener("keyup", () => {
     let campo1 = campos[0].value;
@@ -49,13 +49,19 @@ const contarCaracteres = () => {
         span1.innerHTML = `${icon}El campo nombre no puede tener este valor ${valorF}`;
         // mensaje.appendChild(span2);
         span1.style.display = "block";
+        arregloFlags[0] = false;
       }
     }
-    if (valorF.length == 0) {
+    if (valorF.length == 0 && campo1.length >= 3) {
+      arregloFlags[0] = true;
       span1.style.display = "none";
+    } else if (campo1.length <= 2) {
+      arregloFlags[0] = false;
+      span1.innerHTML = `${icon}El campo nombre debe tener al menos 3 caracteres`;
+      span1.style.display = "block";
     }
   });
-//==============================================================================
+  //==============================================================================
 
   //=============VALIDACION DEL CAMPO CORREO===================
   campos[1].addEventListener("keyup", () => {
@@ -63,42 +69,49 @@ const contarCaracteres = () => {
     campo2 = campo2.trim();
     let validacion = campo2.match(caracteresEmail);
     if (validacion !== null) {
+      arregloFlags[1] = true;
       // console.log("correcto");
       span2.style.display = "none";
     } else {
       // console.log("mal",campo2);
       span2.innerHTML = `${icon}El correo no es valido`;
-      mensaje.appendChild(span3);
+      // mensaje.appendChild(span3);
       span2.style.display = "block";
+      arregloFlags[1] = false;
     }
   });
-//==============================================================================
+  //==============================================================================
 
   //=============VALIDACION DEL CAMPO TELEFONO/CELULAR===================
   campos[2].addEventListener("keyup", () => {
     let campo3 = campos[2].value;
-    campo3=campo3.trim();
+    campo3 = campo3.trim();
     // console.log(campo3, campo3.length);
 
-    let v_Telefono_celular=campo3.match(valoresCelular);
-    if(v_Telefono_celular===null){
-      console.log(v_Telefono_celular)
-      span3.innerHTML =`${icon}Por favor ingresa un número de telefono/celular valido`;
-        span3.style.display = "block";
-      }
-      else{
-        span3.style.display = "none";
-      }
-    });
-//==============================================================================
+    let v_Telefono_celular = campo3.match(valoresCelular);
+    if (v_Telefono_celular === null) {
+      // console.log(v_Telefono_celular);
+      span3.innerHTML = `${icon}Por favor ingresa un número de telefono/celular valido`;
+      span3.style.display = "block";
+      arregloFlags[2] = false;
+    } else {
+      span3.style.display = "none";
+      arregloFlags[2] = true;
+    }
+  });
+  //==============================================================================
 
-//=============CAMPO Mensaje===================
+  //=============CAMPO MENSAJE===================
 
-campos[3].addEventListener('keyup',()=>{
-  let campoM= campos[3].value.length;
-  span4.innerHTML = `${campoM}/300 Carácteres`;
-})
-
+  campos[3].addEventListener("keyup", () => {
+    let campoM = campos[3].value.length;
+    span4.innerHTML = `${campoM}/300 Carácteres`;
+    if (campoM >= 3) {
+      arregloFlags[3] = true;
+    } else {
+      arregloFlags[3] = false;
+    }
+  });
 
   //     let campo3 = campos[2].value;
   //     let campo4 = campos[3].value;
