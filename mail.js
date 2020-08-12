@@ -1,6 +1,5 @@
 require('./config/config.js');
 const nodemailer = require("nodemailer");
-// console.log(ps, euser)
 const emisor = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -20,10 +19,11 @@ let receptor = {
 const enviarMail = (contenido) => {
 
     receptor.text =
+
         `Nombre: ${contenido.nombre}
-     Correo: ${contenido.correo}
-     Celular/Telefono: ${contenido.celular}
-     Mensaje: ${contenido.mensaje}`;
+         Correo: ${contenido.correo}
+         Celular/Telefono: ${contenido.celular}
+         Mensaje: ${contenido.mensaje}`;
 
     emisor.sendMail(receptor, (err, info) => {
         if (err) {

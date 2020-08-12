@@ -74,7 +74,7 @@ const validarCaracteres = () => {
             span2.style.display = "none";
         } else {
             // console.log("mal",campo2);
-            span2.innerHTML = `${icon}El correo no es valido`;
+            span2.innerHTML = `${icon}Por favor ingresa un correo con el formato correcto`;
             span2.style.display = "block";
             arregloFlags[1] = false;
         }
@@ -128,12 +128,16 @@ const botonEnviar = () => {
     if (arregloFlags[0] === true && arregloFlags[1] === true && arregloFlags[2] === true && arregloFlags[3] === true) {
         console.log('flag activada', arregloFlags)
         mensaje.style.display = "none";
-        boton.removeAttribute('disabled')
+        boton.removeAttribute('disabled');
+        boton.classList.remove('deactivated');
+        boton.classList.add('activated');
         console.log(boton)
     } else {
         console.log('flag desactivada', arregloFlags)
         mensaje.style.display = "block";
-        boton.setAttribute('disabled')
+        boton.setAttribute('disabled', '');
+        boton.classList.remove('activated');
+        boton.classList.add('deactivated');
         console.log(boton.attributes)
     }
 }
