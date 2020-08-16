@@ -26,11 +26,18 @@ app.get("/curriculum", (req, res) => {
 app.get("/contacto", (req, res) => {
     res.render("contacto");
 });
+
+//pagina de mensaje enviado
+
+// app.get('/enviado', (req, res) => {
+
+// });
+
 app.post('/contacto', (req, res) => {
     let body = req.body;
     // receptor.text = body;
-    console.log(body)
-        // enviarMail(body)
-    res.render('contacto')
+    // console.log(body)
+    enviarMail(body)
+    res.render('enviado')
 })
 module.exports = app;

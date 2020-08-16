@@ -13,6 +13,11 @@ html {
     /*1rem=10px*/
 }
 
+
+/* UTILIDATES */
+
+.boton {}
+
 .container {
     margin: 0 auto;
     display: block;
@@ -234,7 +239,7 @@ svg {
     font-size: 1.6rem;
 }
 
-.activated button {
+.activated {
     margin: 30px auto 40px;
     display: block;
     width: 50.9%;
@@ -244,27 +249,24 @@ svg {
     border: none;
     text-transform: uppercase;
     font-size: 1.4rem;
+    cursor: pointer;
 }
 
-.activated button:hover {
+.activated:hover {
     cursor: pointer;
     background-color: var(--hover);
 }
 
-.deactivated button {
+.deactivated {
     margin: 30px auto 40px;
     display: block;
     width: 50.9%;
     padding: 10px 0;
     color: white;
-    background-color: var(--color-principal);
+    background-color: rgba(32, 155, 195, 0.5);
     border: none;
     text-transform: uppercase;
     font-size: 1.4rem;
-    cursor: not-allowed;
-}
-
-.deactivated button:hover {
     cursor: not-allowed;
 }
 
@@ -284,6 +286,7 @@ svg {
     width: 40px;
     height: 40px;
 }
+
 
 /*CURRICULUM*/
 
@@ -358,8 +361,7 @@ svg {
 /*Efecto Neon*/
 
 .contenedor-error h1:hover,
-.contenedor-error p:hover,
-.contenedor-error a:hover {
+.contenedor-error p:hover {
     text-decoration: none;
     color: #26bdd8;
     text-shadow: 0 0 50px #1d7b8b;
@@ -402,21 +404,59 @@ h1:hover {
     display: block;
     margin-top: 1rem;
 }
-.container-form i{
-    color:rgb(202, 75, 75);
+
+.container-form i {
+    color: rgb(202, 75, 75);
 }
-.messageI{
+
+.messageI {
     display: none;
-    position:relative;
+    position: relative;
     width: fit-content;
     margin: 0 auto 1.5rem;
     text-align: center;
     font-size: 1.3rem;
 }
 
-#m4{
+#m4 {
     font-size: 1.3rem;
 }
+
+
+/* ENVIADO */
+
+.enviado {
+    z-index: 98;
+    color: var(--color-blanco);
+    text-align: center;
+}
+
+.enviado h1 {
+    font-size: 6rem;
+    text-transform: capitalize;
+}
+
+.enviado p {
+    font-size: 2rem;
+}
+
+.enviado svg {
+    color: white;
+}
+
+.icon {
+    display: flex;
+    justify-content: space-around;
+    font-size: 5.5rem;
+    flex-direction: column;
+}
+
+.btn a {
+    text-decoration: none;
+    color: var(--color-blanco);
+}
+
+
 /*MOBILES*/
 
 @media screen and (max-width:450px) {
@@ -560,7 +600,6 @@ h1:hover {
         margin-bottom: 3rem;
     }
     /* FORMULARIO */
-    
     .container-form form {
         width: 90%;
         padding: 0;

@@ -7,7 +7,7 @@
     <div class="container" id="particles-js">
     {{> navbar}}
 
-       <div class="container-form deactivated">
+       <div class="container-form ">
             <form method="POST" action="/contacto">
                 <div id="barra">
                     <h1>Contacto</h1>
@@ -47,19 +47,20 @@
                 <span id="m2" class="messageI"></span>
                 <input type="text" placeholder="Telefono/Celular" autocomplete="off" name="celular" maxlength="15">
                 <span id="m3" class="messageI"></span>
-                <textarea name="mensaje" placeholder="Mensaje" maxlength="300"  required></textarea>
+                <textarea name="mensaje" placeholder="Mensaje" maxlength="300"></textarea>
                 <span id="m4">0/300 Carácteres</span>
                 <span class="mensaje">
                     <i class="fas fa-asterisk"></i>
                     Todos los campos son requeridos
                     </span>
-                <button type="submit" id="button" disabled>Enviar</button>
+                <button type="submit" id="button" class="deactivated "disabled>Enviar</button>
+                
                 <div class="container-social">
-                    <a href="https://wa.me/50761417992">
+                    <a href="https://wa.me/50761417992" target="_blank">
                         <img src="assets/css/images/wa.svg" alt="" srcset="" id="whatsapp">
                     </a>
 
-                    <a href="https://www.facebook.com/507angel">
+                    <a href="https://www.facebook.com/507angel" target="_blank">
                         <img src="assets/css/images/fb.svg" alt="" srcset="" id="fb">
                     </a>
                 </div>
