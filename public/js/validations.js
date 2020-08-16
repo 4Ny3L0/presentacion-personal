@@ -121,25 +121,6 @@ const contarCaracteres = () => {
     v= 'alguun campo Falta'
     console.log('Falta algun campo por llenar',v)
   }
-  //     let campo3 = campos[2].value;
-  //     let campo4 = campos[3].value;
-  //     //  console.log('campo1: ',campo1)
-  //     //  console.log('campo2: ',campo2)
-  //     //  console.log('campo3: ',campo3)
-  //     //  console.log('campo4: ',campo4)
-  //     //   if (
-  //     //     campo1.length >= 5 &&
-  //     //     campo2.length >= 10 &&
-  //     //     campo3.length > 0 &&
-  //     //     campo4.length >= 1
-  //     //   ) {
-  //     //       mensaje.style.display='none';
-  //     //     console.log("todo bien");
-  //     //   } else {
-  //     //     mensaje.style.display='block';
-  //     //     console.log("todo mal");
-  //     //   }
-  //   });
-  // }
+ 
 };
 contarCaracteres();
