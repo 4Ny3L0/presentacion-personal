@@ -135,7 +135,7 @@ const botonEnviar = () => {
     boton.classList.add("activated");
     // console.log(boton)
   } else {
-    console.log("flag desactivada", arregloFlags);
+    // console.log("flag desactivada", arregloFlags);
     mensaje.style.display = "block";
     boton.setAttribute("disabled", "");
     boton.classList.remove("activated");
